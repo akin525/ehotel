@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Room Details
+Africans-signature - Room Details
 @endsection
 @section('content')
 
@@ -76,7 +76,7 @@ E-Hotel - Room Details
                                 <small class="me-3 pe-3 text-dark"><i class="fas fa-{{$rfitem->icon}} text-dark me-2"></i>{{$rfitem->icon_name}}</small>
                                 @endforeach
                             </div>
-                           
+
                         </div>
                     </div>
                     @endforeach

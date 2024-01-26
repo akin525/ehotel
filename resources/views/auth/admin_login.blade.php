@@ -43,7 +43,7 @@
               <div class="card card-plain">
                 <div class="card-header">
                   <h4 class="font-weight-bolder">Sign In</h4>
-                  <p class="mb-0">E-Hotels Admin</p>
+                  <p class="mb-0">Africans-signatures Admin</p>
                   @include('includes.errors')
                 </div>
                 <div class="card-body">
@@ -68,7 +68,7 @@
                     </div>
                   </form>
                 </div>
-               
+
               </div>
             </div>
           </div>

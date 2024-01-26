@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Thank you
+Africans-signature - Thank you
 @endsection
 @section('content')
 

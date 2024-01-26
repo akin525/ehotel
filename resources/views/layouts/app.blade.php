@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  
+
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/favicon.jpg')}}">
   <link rel="icon" type="image/png" href="{{asset('img/favicon.jpg')}}">
   <title class="noprint">
@@ -18,7 +18,7 @@
   <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <link href="{{asset('css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
   <link href="{{asset('css/buttons.bootstrap5.min.css')}}" rel="stylesheet" />
- 
+
   <!-- Font Awesome Icons -->
   <link href="{{asset('css/all.css')}}" rel="stylesheet">
   {{-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> --}}
@@ -27,7 +27,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="{{asset('assets/css/material-dashboard.css')}}" rel="stylesheet" />
   <style>
- 
+
 .pri input[type="radio"]:checked + label{
   background: #E32F6E;
     padding: 7px 5px;
@@ -41,7 +41,7 @@
     border: none !important;
     color: #fff;
  }
- 
+
   </style>
 </head>
 
@@ -51,7 +51,7 @@
                 <!-- Navbar -->
                   @include('includes.navbar')
                 <!-- End Navbar -->
-                
+
               <div class="container-fluid py-4">
                    @yield('adcontent')
 
@@ -65,12 +65,12 @@
               &copy; <script>
                 document.write(new Date().getFullYear())
               </script>,
-              
-              <a href="javascript:void(0)" class="font-weight-bold">E-Hotels</a>
-              
+
+              <a href="javascript:void(0)" class="font-weight-bold">Africans-signatures</a>
+
             </div>
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -111,11 +111,11 @@
                           </div>
                          </form>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
-                
+
         </div>
     </main>
               @include('includes.settingplugin')

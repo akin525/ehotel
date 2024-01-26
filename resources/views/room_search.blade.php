@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Rooms
+Africans-signature - Rooms
 @endsection
 @section('content')
   <!-- Page Header Start -->
@@ -25,7 +25,7 @@ E-Hotel - Rooms
                 <h1 class="text-dark">{{ucwords($hotl->hotel_name)}}</h1>
                 <p class="text-dark"><small>{{$hotl->address}}</small></p>
                 <p>
-                    <?php 
+                    <?php
                           $rooms_count = DB::table('rooms')->where('hotel_branches_id',$hotel->id)->count();
                         ?>
                  {{$rooms_count}}&nbsp;<i><small>Rooms</small></i>
@@ -36,7 +36,7 @@ E-Hotel - Rooms
                  <div class="w-100">
                     <img src="{{asset($hotl->image)}}" class="img-fluid rounded-3 w-100 h-100" alt="hotel-image">
                  </div>
-                 
+
                 @elseif(!empty($rooms))
 
                 <div class="row g-4">
@@ -79,12 +79,12 @@ E-Hotel - Rooms
                         </div>
                     </div>
                     @endforeach
-                   
+
                 </div>
                 @else
                 <h2 class="text-center">No Result Found</h2>
                 @endif
-                
+
             </div>
 
         </div>

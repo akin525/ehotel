@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Services
+Africans-signature - Services
 @endsection
 @section('content')
 
@@ -100,7 +100,7 @@ E-Hotel - Services
                     <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                 </div>
                 <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                    <p>Thank you so much for your help and cooperation. My daughter would forget her head if it was loose! We will definitely use your hotel again when we visit London. You and your staff could not have been any more helpful. We were delighted that we had chosen E-hotel.</p>
+                    <p>Thank you so much for your help and cooperation. My daughter would forget her head if it was loose! We will definitely use your hotel again when we visit London. You and your staff could not have been any more helpful. We were delighted that we had chosen Africans-signature.</p>
                     <div class="d-flex align-items-center">
                         <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
                         <div class="ps-3">

@@ -34,7 +34,7 @@
     <link href="{{asset('css/slick.css')}}" rel="stylesheet">
     <link href="{{asset('css/slick-theme.css')}}" rel="stylesheet">
     <link href="{{asset('css/lightbox.css')}}" rel="stylesheet" />
-   
+
 </head>
 <body>
 <div class="container-xxl bg-white p-0" style="{{URL::current() == route('book.checkout') ? 'background-color:#f4f4f4 !important;' : ''}}">
@@ -51,7 +51,7 @@
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
                 <a href="{{route('welcome')}}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                    <img src="{{asset('img/logo.png')}}" alt="logo" >
+                    <img width="100" src="{{asset('img/loga.png')}}" alt="logo" >
                 </a>
             </div>
             <div class="col-lg-9">
@@ -78,7 +78,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                     <a href="{{route('welcome')}}" class="navbar-brand d-block d-lg-none">
-                        <img src="{{asset('img/logo.png')}}" alt="logo">
+                        <img src="{{asset('img/loga.png')}}" alt="logo">
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -134,11 +134,11 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-4">
                       <a href="{{route('welcome')}}">
-                        <img src="{{asset('img/logo.png')}}" alt="logo">
+                        <img width="100" src="{{asset('img/loga.png')}}" alt="logo">
                     </a>
-                    
+
                     <p class="text-white mb-0 my-2">
-                        where you be like prince and princess, like no others, where you enjoy yourself, and back yourslef comfortable 
+                        where you be like prince and princess, like no others, where you enjoy yourself, and back yourslef comfortable
                     </p>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -180,10 +180,10 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy;{{date("Y")}} <a class="border-bottom" href="{{route('welcome')}}">E-hotel</a>, All Right Reserved.
+                    &copy;{{date("Y")}} <a class="border-bottom" href="{{route('welcome')}}">Africans-signature</a>, All Right Reserved.
 
                     <!--/*** footer.. T. ***/-->
-                    Designed By <a class="border-bottom" href="http://essentialgroup.ng/">Essential Group</a>
+                    Designed By <a class="border-bottom" href="http://essentialgroup.ng/">Sammighty Group</a>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
@@ -219,13 +219,13 @@
 <script src="{{asset('js/slick.min.js')}}"></script>
 <script src="{{asset('js/lightbox.min.js')}}"></script>
 <script src="{{asset('js/jsonscript.js')}}"></script>
-<script src="https://js.paystack.co/v1/inline.js"></script> 
+<script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
     $(document).ready(function(){
         let url = $("#newslet").attr("action");
         $(".newssubmit").click(function(e){
             e.preventDefault();
-            
+
             $.ajax({
             url: url,
             method: "post",
@@ -270,7 +270,7 @@
                 }
              });
           });
-          $(document).on('click','.resl',function(){              
+          $(document).on('click','.resl',function(){
             $("#searchText").val($(this).text());
             $("#hid").val($(this).attr('data-id'));
             $("#stat").val($(this).attr('data-state'));

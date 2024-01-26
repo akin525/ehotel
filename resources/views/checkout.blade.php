@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Book Your Stay
+Africans-signature - Book Your Stay
 @endsection
 @section('content')
 
@@ -18,7 +18,7 @@ E-Hotel - Book Your Stay
                         <div class="col-md-7 col-lg-7 col-sm-12">
                          <div class="card rounded-3 bg-white mb-3">
                              <div class="card-body">
-                               
+
                                  <h6>
                                      <span class="rounded-circle bg-dark text-white px-2 py-1">1</span>&nbsp;&nbsp;
                                  Booking Details
@@ -60,12 +60,12 @@ E-Hotel - Book Your Stay
                                  </div>
                              </div>
                          </div>
-     
+
                          <div class="card rounded-3 bg-white mb-3">
                              <div class="card-body">
                                  <h6 class="mb-4">
                                  <span class="rounded-circle bg-dark text-white px-2 py-1">2</span>&nbsp;&nbsp;
-                                 Choose How to Pay 
+                                 Choose How to Pay
                                  </h6>
                                  <div class="border rounded-3 py-3 mb-3 px-2 prp">
                                     <div class="form-check position-relative">
@@ -153,7 +153,7 @@ E-Hotel - Book Your Stay
                                     </p>
                                     <p class="mx-5">{{ucwords($rm->bookoption)}}</p>
                                    </div>
-                                   <?php 
+                                   <?php
                                     $d = !empty($_GET['period']) ? $_GET['period'] : '';
                                      $dte = explode("-",$d);
                                    ?>
@@ -177,9 +177,9 @@ E-Hotel - Book Your Stay
                                     <div class="form-group col-md-6 col-lg-6 col-sm-12 my-2">
                                         <label class="text-dark" for="child"><strong>Children</strong></label>
                                         <input type="number" name="children" min="0" max="30" value="{{session()->has('search') ? session()->get('search')['children'] : '0'}}" class="form-control" id="child" autocomplete="off">
-                                    </div> 
-                                    
-                                    <?php 
+                                    </div>
+
+                                    <?php
                                      $opt = $rm->bookoption;
                                     ?>
 
@@ -187,7 +187,7 @@ E-Hotel - Book Your Stay
                                      <label class="text-dark"><strong>Pick a Date</strong></label>
                                      <div class="col-md-7 col-lg-7 col-sm-12">
                                         <input type="date" name="pickdate"  class="form-control" id="cinnm" autocomplete="off" value="{{session()->has('search') ? session()->get('search')['checkin'] : ''}}">
-                                    </div> 
+                                    </div>
                                      @else
                                         <div class="col-md-6 col-lg-6 col-sm-12">
                                             <label class="text-dark"><strong>Checkin Date</strong></label>
@@ -196,25 +196,25 @@ E-Hotel - Book Your Stay
                                         <div class="col-md-6 col-lg-6 col-sm-12">
                                             <label class="text-dark"><strong>Checkout Date</strong></label>
                                             <input type="date" name="checkout" class="form-control" id="cout" onchange="getdateprice()" autocomplete="off" value="{{session()->has('search') ? session()->get('search')['checkout'] : ''}}">
-                                        </div> 
+                                        </div>
                                      @endif
                                    </div>
                                 <hr>
                                 <h5>Payment Summary:</h5>
-                              
+
                                 <div class="d-flex justify-content-between">
                                     <p>
                                       <strong class="text-break">Amount to be paid</strong>
                                     </p>
                                     <p class="mx-5">&#x20A6; <span class="topy">{{!empty($_GET['price']) ? number_format($_GET['price']) : ''}}</span></p>
-                                   </div> 
+                                   </div>
                                    <hr>
                                    <div class="form-check col-md-12 col-lg-12 col-sm-12">
                                     <div style="margin-left: 10px">
                                         <input class="form-check-input" type="checkbox" name="pri" onchange="if(this.checked == true){document.getElementById('cmbtn').disabled = false;}else{document.getElementById('cmbtn').disabled = true;}" autocomplete="off" value="1" id="flexCheckDefaultpriv">
                                     <label class="form-check-label text-dark" for="flexCheckDefaultpriv">
                                        <small>
-                                        I agree to the <a href="{{route('tc')}}" >Term & Conditions</a> and <a href="{{route('privacy')}}" >Privacy policies</a> of E-Hotel. 
+                                        I agree to the <a href="{{route('tc')}}" >Term & Conditions</a> and <a href="{{route('privacy')}}" >Privacy policies</a> of Africans-signature.
                                        </small>
                                     </label>
                                     </div>
@@ -222,14 +222,14 @@ E-Hotel - Book Your Stay
                                   {{-- @if ($opt == "by day" || $opt == "by hour" || $opt == "by night")
                                   @else
                                   @endif --}}
-                                   <input type="hidden" name="hotel_name" id="hotelname" value="{{$rm->hotelbranch->hotel_name}}">                                   
-                                   <input type="hidden" name="book_location" id="bkloca" value="{{$rm->hotelbranch->location}}">                                   
+                                   <input type="hidden" name="hotel_name" id="hotelname" value="{{$rm->hotelbranch->hotel_name}}">
+                                   <input type="hidden" name="book_location" id="bkloca" value="{{$rm->hotelbranch->location}}">
                                    <input type="hidden" name="bookoption" id="bkopt" value="{{$rm->bookoption}}">
                                    <input type="hidden" name="price" id="pr" value="{{!empty($_GET['price']) ? $_GET['price'] : ''}}">
                                    <input type="hidden" name="timing" id="tmu" value="{{!empty($_GET['period']) ? $_GET['period'] : ''}}">
                                    <input type="hidden" name="duration" id="dr" value="1">
                                     <input type="hidden" name="roomid" id="rmid" value="{{$rm->id}}">
-                                   
+
                                    <div class="form-group my-3 cm">
                                     <span class="text-center text-sm txtsuce"></span>
                                     <button type="button" class="btn btn-dark rounded-3 w-100" onclick="comfirmbookin()" id="cmbtn">Confirm Booking</button>
@@ -272,19 +272,19 @@ E-Hotel - Book Your Stay
 </script>
    <script>
      $(document).ready(function(){
-         
+
           $('input[name="payment_type"]').change(function(){
               if($(this).val() === "transfer" || $(this).val() === "credit card"){
-                $(".py").show();  
+                $(".py").show();
                 $(".cm").hide();
             }else{
-                $(".py").hide();  
+                $(".py").hide();
                 $(".cm").show();
             }
           });
 
         // $("#cout").change(function(){
-        
+
         // });
 
       $("#valiem").submit(function(e){
@@ -315,17 +315,17 @@ E-Hotel - Book Your Stay
                     $("#cemail").text('Submit');
                   $("#cemail").attr('disabled',false);
                 }
-               
+
             },
             error:function(xhr,status,errorThrown){
-              alert("Error... "+errorThrown); 
+              alert("Error... "+errorThrown);
               $("#cemail").text('Submit');
                 $("#cemail").attr('disabled',false);
             }
         });
       });
 
-   
+
      });
    </script>
 
@@ -348,7 +348,7 @@ function makepayment(){
             success:function(data){
                 if(data == "ok"){
                     payWithPaystack();
-                    
+
                 }else if(data.bk1 == "1" || data.bk2 == "1"){
                     alert('sorry these room has already been booked');
                     $("#pybtn").text('Confirm Booking & Payment');
@@ -359,7 +359,7 @@ function makepayment(){
                 }
             },
             error:function(xhr,status,errorThrown){
-              alert("Error... "+errorThrown); 
+              alert("Error... "+errorThrown);
               $("#pybtn").text('Confirm Booking & Payment');
                 $("#pybtn").attr('disabled',false);
                 $("#flexCheckDefaultpriv").attr("checked",false);
@@ -369,12 +369,12 @@ function makepayment(){
   </script>
 
    <script>
-    
+
         var paymentForm = document.getElementById('submitcheckout');
 paymentForm.addEventListener('submit', payWithPaystack, false);
     function payWithPaystack() {
         $("#pybtn").text('please wait...');
-       $("#pybtn").attr('disabled',true); 
+       $("#pybtn").attr('disabled',true);
 var handler = PaystackPop.setup({
 
   key: "pk_test_438307910257422994babe837a5a8d5c46075b8b", // Replace with your public key
@@ -393,9 +393,9 @@ var handler = PaystackPop.setup({
     var reference = response.reference;
 
     alert('Payment complete! Reference: ' + reference);
-    
+
     paymentForm.submit();
-   
+
     // Make an AJAX call to your server with the reference to verify the transaction
 
   },
@@ -412,16 +412,16 @@ var handler = PaystackPop.setup({
 handler.openIframe();
 
 }//paystack
-  
+
    </script>
 
 <script>
     var comfirmForm = document.getElementById('submitcheckout');
     comfirmForm.addEventListener('submit', comfirmbookin, false);
     function comfirmbookin(){
-      
+
         let cap = "{{$rm->room_capacity}}";
-    
+
     let ppl = parseInt($("#adu").val()) + parseInt($("#child").val());
 //   alert(ppl);
     if(ppl > cap){
@@ -449,14 +449,14 @@ handler.openIframe();
                     $("#flexCheckDefaultpriv").attr("checked",false);
                     $("#avaroomModal").modal('show');
                     // if(data.record == "0"){
-                    //     $("#rmcontnt").html("<p>No Avaliable Room</p>"); 
+                    //     $("#rmcontnt").html("<p>No Avaliable Room</p>");
                     // }else{
                          $("#rmcontnt").html(data.record);
                     console.log(data.record);
                 }
             },
             error:function(xhr,status,errorThrown){
-              alert("Error... "+errorThrown); 
+              alert("Error... "+errorThrown);
                 $("#flexCheckDefaultpriv").attr("checked",false);
             }
            });

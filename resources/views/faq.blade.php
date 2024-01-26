@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Faq
+Africans-signature - Faq
 @endsection
 @section('content')
 
@@ -29,9 +29,9 @@ E-Hotel - Faq
                           </div>
                         </div>
                       @endforeach
-                       
+
                       </div>
-                  
+
                 </section>
             </div>
           </div>

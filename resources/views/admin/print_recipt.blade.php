@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  
+
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/favicon.jpg')}}">
   <link rel="icon" type="image/png" href="{{asset('img/favicon.jpg')}}">
   <title>
@@ -18,7 +18,7 @@
   <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <link href="{{asset('css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
   <link href="{{asset('css/buttons.bootstrap5.min.css')}}" rel="stylesheet" />
- 
+
   <!-- Font Awesome Icons -->
   <link href="{{asset('css/all.css')}}" rel="stylesheet">
   {{-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> --}}
@@ -37,13 +37,13 @@
 
 <div class="sheet">
     <p class="text-center">
-        <img src="{{asset('img/logo.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{asset('img/loga.png')}}" class="navbar-brand-img h-100" alt="main_logo">
     </p>
 
 <div class="my-3"><h2 class="text-center">INVOICE</h2></div><hr>
 <div class="row justify-content-end my-2">
-     <strong class="text-end">Recipt No : <span>#{{mt_rand('000000','999999')}}</span></strong>      
-</div> 
+     <strong class="text-end">Recipt No : <span>#{{mt_rand('000000','999999')}}</span></strong>
+</div>
 <table class="table table-bordered text-dark">
 <tbody>
     <tr class="border border-dark"><td style="border:2px solid #000!important">Customer Name</td><td style="border:2px solid #000!important">{{$recpt->client_name}}</td></tr>
@@ -57,8 +57,8 @@
     <tr class="border border-dark"><td style="border:2px solid #000!important">Time In</td><td style="border:2px solid #000!important">{{date('h:ia',strtotime($recpt->time_in))}}</td></tr>
     <tr class="border border-dark"><td style="border:2px solid #000!important">Amount Paid</td><td style="border:2px solid #000!important">&#x20A6;{{number_format($recpt->amount_paid)}}</td></tr>
     @if (!is_null($recpt->discount))
-    <tr class="border border-dark"><td style="border:2px solid #000!important">Discount</td><td style="border:2px solid #000!important">&#x20A6;{{number_format($recpt->discount)}}</td></tr> 
-    <tr class="border border-dark"><td style="border:2px solid #000!important">Autorized By</td><td style="border:2px solid #000!important">{{$recpt->autorized_by}}</td></tr> 
+    <tr class="border border-dark"><td style="border:2px solid #000!important">Discount</td><td style="border:2px solid #000!important">&#x20A6;{{number_format($recpt->discount)}}</td></tr>
+    <tr class="border border-dark"><td style="border:2px solid #000!important">Autorized By</td><td style="border:2px solid #000!important">{{$recpt->autorized_by}}</td></tr>
     @endif
 </tbody>
 </table>
@@ -79,7 +79,7 @@
      print();
      window.close();
     });
-    
+
   </script>
 </body>
 </html>

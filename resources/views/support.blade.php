@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Support
+Africans-signature - Support
 @show
 @section('content')
 
@@ -65,7 +65,7 @@ E-Hotel - Support
 @section('fscript')
 <script>
     $(document).ready(function(){
-      
+
         $("#suprtsubmit").submit(function(e){
             e.preventDefault();
               let url = $("#suprtsubmit").attr("action");

@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Rooms
+Africans-signature - Rooms
 @endsection
 @section('content')
   <!-- Page Header Start -->

@@ -98,7 +98,7 @@ class ForntendController extends Controller
         'msg' => $request->message
         ],function($contactmail)use($request){
            $contactmail->from($request->email,$request->name);
-           $contactmail->to('info@e-hotel.com');
+           $contactmail->to('info@africanssignature.com.ng');
            $contactmail->subject($request->subject);
         });
 
@@ -109,7 +109,7 @@ class ForntendController extends Controller
        //newsletter
 public function newsletter(Request $request){
     $this->validate($request,[
-      'email' => ['required','string','email'],    
+      'email' => ['required','string','email'],
     ]);
 
     Newsletter::create([
@@ -117,11 +117,11 @@ public function newsletter(Request $request){
     ]);
 
      Mail::send(['html'=>'mails.sendmail'],[
-        'msg' => 'Welcome to E-hotel Newsletter, Thank you for subcribing to our newsletter.'
+        'msg' => 'Welcome to Africans-signature Newsletter, Thank you for subcribing to our newsletter.'
         ],function($newsmail)use($request){
-           $newsmail->from('no-reply@e-hotel.com','E-hotel');
+           $newsmail->from('no-reply@Africans-signature.com','Africans-signature');
            $newsmail->to($request->email);
-           $newsmail->subject('E-hotel Newsletter');
+           $newsmail->subject('Africans-signature Newsletter');
         });
         return "success";
         //redirect()->back()->with('success', 'You have successfully subcribed to Transactor BDC Newsletter');
@@ -136,12 +136,12 @@ public function newsletter(Request $request){
            'subject' => ['required','string'],
            'message' => ['required','string'],
         ]);
-          
+
             Mail::send(['html'=>'mails.sendmail'],[
         'msg' => "name:  ".$request->name."<br><br> Phone:  ".$request->phone."<br><br>".$request->message
         ],function($contactmail)use($request){
            $contactmail->from($request->email,$request->name);
-           $contactmail->to('tech@e-hotel.com');
+           $contactmail->to('tech@Africans-signature.com');
            $contactmail->subject($request->subject);
         });
 
@@ -186,7 +186,7 @@ public function searchresult(){
      $hotels= HotelBranch::where('id',request()->hotelid)->first();
      $rm = Room::where('state',request()->state)->orWhere('city',request()->city)
                  ->orWhere('bookoption',request()->bookingType)->get();
-        
+
     // $searchresult = $hotels->merge($rm);
     session()->put('search',[
         'checkin' => $cin,
@@ -203,7 +203,7 @@ public function searchresult(){
 public function checkaccount(){
     $user = User::where('email',request()->email)->first();
     if(empty($user)){
-      return 0;  
+      return 0;
     }else{
         return array(
             'fname' => $user->firstname,
@@ -211,7 +211,7 @@ public function checkaccount(){
             'em' => $user->email,
             'phne' => $user->phone,
         );
-    } 
+    }
 }
 
 public function store_checkout(Request $r){
@@ -221,7 +221,7 @@ public function store_checkout(Request $r){
         'email' => ['required','string','email'],
         'phone_number' => ['required','string'],
     ]);
-   
+
             if($r->usersave == '1'){
                 User::firstOrCreate([
                     'firstname' => $r->first_name,
@@ -229,14 +229,14 @@ public function store_checkout(Request $r){
                     'email' => $r->email,
                     'phone' => $r->phone_number,
                 ]);
-            } 
+            }
 
             $bcode = Str::random(6);
             $bcin = !empty($r->checkin) ? $r->checkin : $r->pickdate;
             $bcot = !empty($r->checkout) ? $r->checkout : $r->pickdate;
             $p = $r->payment_type == "at location" ? "0" : "1";
             $ppl = $r->adult + $r->children;
-            
+
             $dte = explode("-",$r->timing);
             Booking::create([
                 'room_id' => $r->roomid,
@@ -250,7 +250,7 @@ public function store_checkout(Request $r){
                 'bookoption' => $r->bookoption,
                 'checkin_date' => $bcin,
                 'checkout_date' => $bcot,
-                'duration' => $r->duration, 
+                'duration' => $r->duration,
                 'timing' => $r->timing,
                 'amount_paid' => $r->price,
                 'payment_method' => $r->payment_type,
@@ -261,7 +261,7 @@ public function store_checkout(Request $r){
             ]);
 
             Mail::send(['html'=>'mails.sendmail'],[
-                'msg' => "Hello : ".$r->last_name." ".$r->first_name." below is your booking details. <br><br> Booking code: ".$bcode." 
+                'msg' => "Hello : ".$r->last_name." ".$r->first_name." below is your booking details. <br><br> Booking code: ".$bcode."
                 <br><br>Hotel: ".$r->hotel_name."
                 <br><br>Booking Location: ".$r->book_location."
                 <br><br>Booking Option: ".$r->bookoption."
@@ -272,13 +272,13 @@ public function store_checkout(Request $r){
                 <br><br>Expected time of arrival: ".$r->arrival_time."
                 <br><br>Please keep it for safe, for it is going to be used to validate your booking."
                 ],function($bookingmail)use($r){
-                   $bookingmail->from("no-reply@e-hotel.com","E-hotel");
+                   $bookingmail->from("no-reply@Africans-signature.com","Africans-signature");
                    $bookingmail->to($r->email);
-                   $bookingmail->subject("E-hotel Booking Details");
+                   $bookingmail->subject("Africans-signature Booking Details");
                 });
-         
+
                 session()->forget('search');
-                
+
    return redirect()->route('thankyou')->with('success','Booking Successfull...Your Booking Details Sent to these email:'.$r->email);
 }
 
@@ -290,7 +290,7 @@ public function checkroombooking(){
         $bkins =  Booking::where('room_id',request()->roomid)
                             ->where('status','1')->first();
     $bkins =  Booking::where('room_id',request()->roomid)
-                        ->where('status','1')->first(); 
+                        ->where('status','1')->first();
   if(empty($bkins)){
      return "ok";
     }else{
@@ -316,7 +316,7 @@ public function checkroombooking(){
              }
             $getemtrm[] .='</div></a>';
            }
-        
+
         return array(
             'record' =>  $getemtrm,
             "bk2" => '1'
@@ -325,12 +325,12 @@ public function checkroombooking(){
     }else{
         $chis ="";
         $rooms = Room::select('id','room_slug','room_name','room_capacity')->whereNot('id',request()->roomid)->get();
-        
+
         foreach($rooms as $clkrm){
             $chis .=  ClientCheckinout::where('room_id',$clkrm->id)
                               ->where('status','1')->first();
           }
-          
+
            if(empty($chis)){
             $prce = "";
             $getemtrm[] = '<div class="row">';
@@ -346,12 +346,12 @@ public function checkroombooking(){
              }
             $getemtrm[] .='</div></a>';
            }
-        
+
         return array(
             'record' => $getemtrm,
             "bk1" => '1'
         );
-    }   
+    }
 }
 
 }//end class

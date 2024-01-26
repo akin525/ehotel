@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel
+Africans-signature
 @endsection
 @section('content')
 
@@ -9,10 +9,10 @@ E-Hotel
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{asset('img/slide-1.jpeg')}}" alt="Image">
+                    <img class="w-100" src="{{asset('img/night2.jpeg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">E-Hotel</h6>
+                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Africans-signature</h6>
                             <h1 class="display-3 text-white mb-4 animated slideInDown">A Place Like Home</h1>
                             <a href="{{route('gallery')}}" class="btn btn-primary rounded py-md-3 px-md-5 me-3 animated slideInLeft">Our Gallery</a>
                             <a href="#book-room" class="btn btn-outline-primary rounded py-md-3 px-md-5 animated slideInRight">Book A Room</a>
@@ -20,10 +20,10 @@ E-Hotel
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{asset('img/slide-2.jpeg')}}" alt="Image">
+                    <img class="w-100" src="{{asset('img/night.jpeg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">E-Hotel</h6>
+                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Africans-signature</h6>
                             <h1 class="display-3 text-white mb-4 animated slideInDown">Let make you like Price and Princess</h1>
                             <a href="{{route('gallery')}}" class="btn btn-primary rounded py-md-3 px-md-5 me-3 animated slideInLeft">Our Gallery</a>
                             <a href="#book-room" class="btn btn-outline-primary rounded py-md-3 px-md-5 animated slideInRight">Book A Room</a>
@@ -31,10 +31,10 @@ E-Hotel
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{asset('img/slide-3.jpeg')}}" alt="Image">
+                    <img class="w-100" src="{{asset('img/night.jpeg')}}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
-                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">E-Hotel</h6>
+                            <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Africans-signature</h6>
                             <h1 class="display-3 text-white mb-4 animated slideInDown">You Are Fit To Be There</h1>
                             <a href="{{route('gallery')}}" class="btn btn-primary rounded py-md-3 px-md-5 me-3 animated slideInLeft">Our Gallery</a>
                             <a href="#book-room" class="btn btn-outline-primary rounded py-md-3 px-md-5 animated slideInRight">Book A Room</a>
@@ -66,8 +66,8 @@ E-Hotel
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
                     <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                    <h1 class="mb-4 text-dark">Welcome to <span class="text-primary text-uppercase">E-Hotel</span></h1>
-                    <p class="mb-4">Welcome to E-hotel, where you be like KING and QUEEN, a comfort zone you ever wanted to be, where you will always want to be and spend your night always</p>
+                    <h1 class="mb-4 text-dark">Welcome to <span class="text-primary text-uppercase">Africans-signature</span></h1>
+                    <p class="mb-4">Welcome to Africans-signature, where you be like KING and QUEEN, a comfort zone you ever wanted to be, where you will always want to be and spend your night always</p>
                     <div class="row g-3 pb-4">
                         <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                             <div class="border rounded p-1">
@@ -102,16 +102,16 @@ E-Hotel
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('img/about1.jpg')}}" style="margin-top: 25%;">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{{asset('img/about9.jpeg')}}" style="margin-top: 25%;">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('img/about2.jpg')}}">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('img/about8.jpeg')}}">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('img/about3.jpg')}}">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.5s" src="{{asset('img/about7.jpeg')}}">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('img/about4.jpg')}}">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{{asset('img/about6.jpeg')}}">
                         </div>
                     </div>
                 </div>
@@ -182,7 +182,7 @@ E-Hotel
                                     <div class="d-flex justify-content-between mb-3">
                                         <h5 class="mb-0">{{$hotel->hotel_name}}</h5>
                                         <p>
-                                            <?php 
+                                            <?php
                                                   $rooms_count = DB::table('rooms')->where('hotel_branches_id',$hotel->id)->count();
                                                 ?>
                                          {{$rooms_count}}&nbsp;<i><small>Rooms</small></i>
@@ -194,13 +194,13 @@ E-Hotel
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     @endforeach
                      <div class="col-12">
                         @if (count($ho) > 6)
                              <a href="{{route('hotels')}}" class="btn btn-primary btn-sm py-3 px-5 mt-2">View More</a>
                         @endif
-                       
+
                      </div>
                 </div>
             </div>
@@ -215,8 +215,8 @@ E-Hotel
         <div class="row g-0">
             <div class="col-md-6 bg-dark d-flex align-items-center">
                 <div class="p-5">
-                    <h6 class="section-title text-start text-white text-uppercase mb-3">E-hotel</h6>
-                    <h1 class="text-white mb-4">Discover A  E-Hotel</h1>
+                    <h6 class="section-title text-start text-white text-uppercase mb-3">Africans-signature</h6>
+                    <h1 class="text-white mb-4">Discover A  Africans-signature</h1>
                     <p class="text-white mb-4">A comfort zone you ever wanted to be, where you will always want to be and spend your night always</p>
                     <a href="{{route('gallery')}}" class="btn btn-primary py-md-3 px-md-5 me-3 my-2">Our Gallery</a>
                     <a href="#book-room" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
@@ -236,7 +236,7 @@ E-Hotel
         <div class="modal-dialog">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">E-Hotel</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Africans-signature</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -348,7 +348,7 @@ E-Hotel
                     <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
                 </div>
                 @endforeach
-               
+
             </div>
         </div>
     </div>
@@ -368,10 +368,10 @@ E-Hotel
                          <a href="{{asset($gitem->imagefile)}}" class="mx-3" data-lightbox="images{{$i+1}}"><img class="img-fluid" src="{{asset($gitem->imagefile)}}" alt=""></a>
                          <?php $i++;?>
                          @endforeach
-                   
+
                   </div>
             </div>
-            
+
         </div>
     </div>
     <!-- Team End -->
@@ -420,6 +420,6 @@ E-Hotel
         //console.log(locations);
      });
     </script>
-    
+
 
 @endsection

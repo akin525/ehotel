@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Our Hotels
+Africans-signature - Our Hotels
 @endsection
 @section('content')
 
@@ -23,7 +23,7 @@ E-Hotel - Our Hotels
                                 <div class="d-flex justify-content-between mb-2">
                                     <h5 class="mb-0">{{$hotel->hotel_name}}</h5>
                                     <p>
-                                        <?php 
+                                        <?php
                                               $rooms_count = DB::table('rooms')->where('hotel_branches_id',$hotel->id)->count();
                                             ?>
                                      {{$rooms_count}}&nbsp;<i><small>Rooms</small></i>
@@ -35,7 +35,7 @@ E-Hotel - Our Hotels
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 @endforeach
                 </div>
             </div>

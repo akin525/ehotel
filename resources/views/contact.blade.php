@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Contact
+Africans-signature - Contact
 @endsection
 @section('content')
 
@@ -38,18 +38,18 @@ E-Hotel - Contact
                     <div class="row gy-4">
                         <div class="col-md-4">
                             <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>book@e-hotel.com</p>
+                            <p><i class="fa fa-envelope-open text-primary me-2"></i>info@africanssignature.com.ng</p>
                         </div>
                         <div class="col-md-4">
                             <h6 class="section-title text-start text-primary text-uppercase">General</h6>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>info@e-hotel.com</p>
+                            <p><i class="fa fa-envelope-open text-primary me-2"></i>info@africanssignature.com.ng</p>
                         </div>
                         <div class="col-md-4">
                             <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@e-hotel.com</p>
+                            <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@Africans-signature.com</p>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
@@ -96,7 +96,7 @@ E-Hotel - Contact
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3 cbtn" type="submit">Send Message</button>
                                 </div>
-                                
+
                             </div>
                         </form>
                     </div>
@@ -112,7 +112,7 @@ E-Hotel - Contact
 @section('fscript')
 <script>
     $(document).ready(function(){
-      
+
         $("#contactsubmit").submit(function(e){
             e.preventDefault();
               let url = $("#contactsubmit").attr("action");

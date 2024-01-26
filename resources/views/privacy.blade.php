@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Privacy Policy
+Africans-signature - Privacy Policy
 @endsection
 @section('content')
 

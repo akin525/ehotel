@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - About
+Africans-signature - About
 @endsection
 @section('content')
 
@@ -30,7 +30,7 @@ E-Hotel - About
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
                     <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">E-Hotel</span></h1>
+                    <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Africans-signature</span></h1>
                     <p class="mb-4">{!!$abtpg ? $abtpg->content : ""!!}</p>
                     <div class="row g-3 pb-4">
                         <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
@@ -111,7 +111,7 @@ E-Hotel - About
                     </div>
                 </div>
                 @endforeach
-               
+
             </div>
         </div>
     </div>

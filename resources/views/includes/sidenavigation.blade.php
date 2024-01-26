@@ -2,7 +2,7 @@
     <div class="noprint sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="{{route('dashboard')}}">
-        <img src="{{asset('img/logo.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{asset('img/loga.png')}}" class="navbar-brand-img h-100" alt="main_logo">
         {{-- <span class="ms-1 font-weight-bold text-white">Material Dashboard 2</span> --}}
       </a>
     </div>
@@ -42,7 +42,7 @@
             <span class="nav-link-text ms-1">Checked Out Clients</span>
           </a>
         </li>
-      
+
        @if (Auth::user()->roles == '1' || Auth::user()->roles == '2')
        <li class="nav-item">
         <a class="nav-link text-white {{URL::current() == route('htl') ? 'bg-gradient-primary active' : ''}}" href="{{route('htl')}}">
@@ -136,7 +136,7 @@
           <span class="nav-link-text ms-1">Terms & Conditions</span>
         </a>
       </li>
-      
+
       <li class="nav-item">
         <a class="nav-link text-white {{URL::current() == route('admin.report') ? 'bg-gradient-primary active' : ''}}" href="{{route('admin.report')}}">
           <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -162,7 +162,7 @@
         </a>
       </li>
        @endif
-       
+
       </ul>
     </div>
     <div class="noprint sidenav-footer position-absolute w-100 bottom-0 ">

@@ -35,7 +35,7 @@ class AdminController extends Controller
     }
 
     public function profile(){
-      
+
         return view('admin.profile');
     }
 
@@ -43,14 +43,14 @@ class AdminController extends Controller
       public function adminuser(){
         // $admin = Auth::guard('admin')->user()->all();
         return view('admin.users')->with('adusers', Admin::all());
-          
+
       }
       //change password view
   public function changepassword(){
      return view('admin.changepassword');
   }
-  
-  
+
+
   public function updateprofile(Request $request){
     Admin::where('id',$request->id)->update([
       'name' => $request->name,
@@ -93,7 +93,7 @@ class AdminController extends Controller
        Admin::where('id',$r->id)->update([
         'roles' => $r->actype
        ]);
-       
+
 
         return redirect()->route('user.account')->with('success','Permission Changed Successfully');
     }
@@ -113,59 +113,59 @@ class AdminController extends Controller
 
      //faq
      public function faqpage(){
-        return view('admin.faq.index')->with('faqlist',Faq::all());                               
+        return view('admin.faq.index')->with('faqlist',Faq::all());
       }
       public function addfaq(Request $request){
           $this->validate($request,[
-           'name' => ['required','string'],        
+           'name' => ['required','string'],
            'body' => ['required','string'],
          ]);
-            
-         $posts = Faq::create([           
+
+         $posts = Faq::create([
              'name' => $request->name,
-             'body' => $request->body,  
+             'body' => $request->body,
              'faqid' => Str::random(5),
          ]);
-  
+
          return redirect()->route('admin.faq')->with('success', 'Record Saved');
           }
-  
+
           public function faqedit($id){
             return view('admin.faq.edit')->with('edfq',Faq::findorfail($id));
-                                            
+
           }
-  
+
              //update faq
               public function faqupdate(Request $request,$id){
                    $this->validate($request,[
            'name' => ['required','string'],
            'body' => ['required','string'],
-        
+
          ]);
-  
-             $fq = Faq::findorfail($id); 
-          
+
+             $fq = Faq::findorfail($id);
+
              $fq->name = $request->name;
              $fq->body = $request->body;
-            
+
              $fq->save();
          return redirect()->route('admin.faq')->with('success', 'Record Updated');
               }
-              
+
               //delete service
               public function faqdelete($id){
-  
-        $faqdel = Faq::findorfail($id); 
+
+        $faqdel = Faq::findorfail($id);
           $faqdel->delete();
           //Comment::where('post_id',$posts->id)->delete();
            return redirect()->route('admin.faq')->with('success', 'Record Deleted');
-  
-              }
-  
 
-        //newsletter 
+              }
+
+
+        //newsletter
         public function managenewsletter(){
-            return view('admin.newsletter')->with('adnews',Newsletter::all()); 
+            return view('admin.newsletter')->with('adnews',Newsletter::all());
         }
         public function deletenewsletter($id){
               $subcribedel = Newsletter::findorfail($id);
@@ -175,28 +175,28 @@ class AdminController extends Controller
         }
         //show send broadcast message
         public function showbroadcast(){
-           
+
             return view('admin.sendbroadcast')->with('allemail', Newsletter::all());
         }
-        
- //send broadcast message 
+
+ //send broadcast message
         public function sendbroadcast(Request $request){
               $this->validate($request, [
             'subject' => ['required', 'string'],
             'message' => ['required','string'],
         ]);
 
-         
+
                   Mail::send(['html' => 'mails.sendmail'],[
                     'msg' => $request->message
                     ],function($subc)use($request){
-                    $subc->from('no-reply@ehotel.com','E-Hotel'); 
-                      foreach ($request->email as $emails) {                
-                    $subc->to(explode(',',$emails));   
-                      }                 
+                    $subc->from('no-reply@ehotel.com','Africans-signature');
+                      foreach ($request->email as $emails) {
+                    $subc->to(explode(',',$emails));
+                      }
                     $subc->subject($request->subject);
                   });
-                
+
               return redirect()->route('news')->with('success','Broadcast Message Sent Successfully');
         }
 
@@ -207,45 +207,45 @@ class AdminController extends Controller
                //gallery
      public function addgallery(Request $request){
          $this->validate($request,[
-          'caption' => ['required','string'],        
+          'caption' => ['required','string'],
           'imagefile' => ['required'],
         ]);
-       
-        
+
+
             if($request->imagefile){
                  $imagePath = $request->file('imagefile');
                  foreach ($imagePath as $value) {
            $imageNewName = time()."_".$value->getClientOriginalName();
              $value->move('imageupload', $imageNewName);
-        
-         
-                $posts = Gallery::create([           
+
+
+                $posts = Gallery::create([
                     'caption' => $request->caption,
                     'imagefile' => 'imageupload/'.$imageNewName
                 ]);
             }
          }
-    
+
         return redirect()->route('admin.gallery')->with('success', 'Record created Successfully');
          }
-    
-    
+
+
            //edit gallery
              public function galleryedit($id) {
                      $galedit = Gallery::findorfail($id);
                      return view('admin.gallery.edit')->with('edt', $galedit);
              }
-    
+
              //update gallery
              public function galleryupdate(Request $request,$id){
                   $this->validate($request,[
           'caption' => ['required','string'],
-          
-       
+
+
         ]);
-    
-            $gall = Gallery::findorfail($id); 
-    
+
+            $gall = Gallery::findorfail($id);
+
         if ($request->hasFile('imagefile')) {
             if (file_exists($gall->imagefile)) {
                 unlink($gall->imagefile);
@@ -255,26 +255,26 @@ class AdminController extends Controller
              $imagePath->move('imageupload', $imageNewName);
               $gall->imagefile = 'imageupload/'.$imageNewName;
         }
-         
+
             $gall->caption = $request->caption;
-           
-           
+
+
             $gall->save();
         return redirect()->route('admin.gallery')->with('success', 'Record Updated Successfully');
              }
-             
+
              //delete gallery
              public function gallerydelete($id){
-    
-                   $gal = Gallery::findorfail($id); 
-    
+
+                   $gal = Gallery::findorfail($id);
+
          if (file_exists($gal->imagefile)) {
             unlink($gal->imagefile);
          }
          $gal->delete();
-         
+
           return redirect()->route('admin.gallery')->with('success', 'Record Deleted Successfully');
-    
+
              }
 
 
@@ -282,17 +282,17 @@ class AdminController extends Controller
              {
                  return view('admin.report');
              }
-         
+
              public function generate_report(Request $r)
              {
                  $this->validate($r,[
                    'date_from' => 'required | string',
                    'date_to' => 'required | string',
                  ]);
-         
+
               $reports = ClientCheckinout::whereBetween('created_at',[date("Y-m-d",strtotime($r->date_from)),date("Y-m-d",strtotime($r->date_to))])
-                                          ->orderBy('created_at','DESC')->get(); 
-                   //return $transct; 
+                                          ->orderBy('created_at','DESC')->get();
+                   //return $transct;
                  return view('admin.printreport')->with('reports', $reports);
              }
 }

@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel -Gallery
+Africans-signature -Gallery
 @endsection
 @section('content')
 
@@ -20,7 +20,7 @@ E-Hotel -Gallery
                     </div>
                     <?php $i++;?>
                     @endforeach
-                    
+
                 </div>
             </div>
 

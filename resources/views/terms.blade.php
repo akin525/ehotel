@@ -1,6 +1,6 @@
 @extends("layouts.forntend")
 @section('title')
-E-Hotel - Terms and conditions
+Africans-signature - Terms and conditions
 @endsection
 @section('content')
 
@@ -9,7 +9,7 @@ E-Hotel - Terms and conditions
             <div class="bg-white shadow " >
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="section-title text-center  text-uppercase">Terms & Conditions</h6>
-                    
+
                 </div>
                 <section id="learning-goals" class="wrapper-content priva">
                     {!!$trm ? $trm->content : ""!!}
