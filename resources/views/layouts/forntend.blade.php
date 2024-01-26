@@ -78,7 +78,7 @@
                 </div>
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                     <a href="{{route('welcome')}}" class="navbar-brand d-block d-lg-none">
-                        <img src="{{asset('img/loga.png')}}" alt="logo">
+                        <img width="100" src="{{asset('img/loga.png')}}" alt="logo">
                     </a>
                     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
