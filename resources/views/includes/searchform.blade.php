@@ -82,7 +82,9 @@
 {{--                                        <input type="submit" id="btnSearch" class="common-btn" value="Search" />--}}
 {{--                                    </div>--}}
 {{--                                </form>--}}
-                                <a href="https://www.airbnb.co.uk/rooms/1071500977157801801?adults=1&viralityEntryPoint=1&s=76&unique_share_id=CF9F1122-B5C6-41F4-97C3-9070A0BF35CA&_branch_match_id=1280513598804637333&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdUvMyhzyUnJDHNzTwIA%2BpfZERsAAAA%3D" class="common-btn">Book Now</a>
+                                <div class="btn-row">
+                                <a href="https://www.airbnb.co.uk/rooms/1071500977157801801?adults=1&viralityEntryPoint=1&s=76&unique_share_id=CF9F1122-B5C6-41F4-97C3-9070A0BF35CA&_branch_match_id=1280513598804637333&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdUvMyhzyUnJDHNzTwIA%2BpfZERsAAAA%3D" class="btn btn-primary common-btn">Book Now</a>
+                                </div>
                             </div>
                         </div>
                     </div>
