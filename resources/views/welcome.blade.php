@@ -66,8 +66,10 @@ Africans-signature
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
                     <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                    <h1 class="mb-4 text-dark">Welcome to <span class="text-primary text-uppercase">Africans-signature</span></h1>
-                    <p class="mb-4">Welcome to Africans-signature, where you be like KING and QUEEN, a comfort zone you ever wanted to be, where you will always want to be and spend your night always</p>
+                    <h1 class="mb-4 text-dark">WELCOME TO <span class="text-primary text-uppercase">AFRICANS SIGNATURE;</span></h1>
+                    <p class="mb-4">
+                         WHERE LUXURY MEETS CONVENIENCE.  We have Beautiful Rooms of varying sizes and prices to meet with any kind of Requirements you may Have.  STAY WITH US TODAY AND DISCOVER THE ESSENCE OF COMFORT.
+                    </p>
                     <div class="row g-3 pb-4">
                         <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                             <div class="border rounded p-1">
